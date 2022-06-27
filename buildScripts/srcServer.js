@@ -14,7 +14,7 @@ import webpack from "webpack";//these two imports were created during the bundli
 import config from "../webpack.config.dev";//remember that its being exported as default so "config" can be named anything
 
 
-const port = 3000;//can choose any port you like
+const port = 3001;//can choose any port you like
 const app = express();//create an instance of express
 const compiler = webpack(config);//created during the bundling process. call webpack and pass it the config that we referenced up here above
 

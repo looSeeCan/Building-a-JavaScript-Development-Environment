@@ -5,7 +5,8 @@
     "scripts": {
         "comment": "skipping this part. cant get it to work, because it the course he uses local tunnel. Im trying to use ngrok. Im sure there is an extension that i can find",
         "prestart": "babel-node buildScripts/startMessage.js",
-        "start": "babel-node buildScripts/srcServer.js",
+        "comment1": "I had an issue with an error involving webpack-dev-middleware. error:0308010C:digital envelope routines::unsupported. Something about node 17 not supporting. I had to add the --openssl-legacy-provider part is the start to fix the error",
+        "start": "babel-node --openssl-legacy-provider buildScripts/srcServer.js",
         "share": "/ngrok http 3000"
     },
     "author": "Cory House",
