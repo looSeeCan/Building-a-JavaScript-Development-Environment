@@ -1,0 +1,16 @@
+//configure babel to transpile our code
+{
+    "presets": ["@babel/preset-env"],
+    "env": {
+        "production": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": "> 0.25%, not dead"//support all browsers used by more than .25% of people that are still officially supported by their creator
+                    }
+                ]
+            ]
+        }
+    }
+}
