@@ -1,0 +1,21 @@
+{
+    "root": true,//declaring this file as the root esLint file. By default ESLint will look for configuration files and all parent folders up to the root directory
+    //this tells ESlint that this is the project root so it shouldnt look at any parent folders fro ohter configuration files.
+    "extends": [
+        "eslint: recommended",//using recommended rules
+        "plugin: import/errors",
+        "plugin: import/warnings"
+    ],
+    "parserOptions": {//defines the version of Js that we are using 
+        "ecmaVersion": 7,//we are using version 7, also known as ES2016
+        "sourceType": "module"//using standard js modules
+    },
+    "env": {//environment section. declares some different environments that ESLint should be aware of. These environments tell ESLint te expect certain global variables.
+        "browser": true,//
+        "node": true,
+        "mocha": true
+    },
+    "rules": {//we can provide other rules we want to overide
+        "no-console": 1//0 = 0ff, 1 = warning, 2 = error
+    }
+}

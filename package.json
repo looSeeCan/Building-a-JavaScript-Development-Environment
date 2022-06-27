@@ -7,6 +7,7 @@
         "prestart": "babel-node buildScripts/startMessage.js",
         "comment1": "I had an issue with an error involving webpack-dev-middleware. error:0308010C:digital envelope routines::unsupported. Something about node 17 not supporting. I had to add the --openssl-legacy-provider part is the start to fix the error",
         "start": "babel-node --openssl-legacy-provider buildScripts/srcServer.js",
+        "comment2": "this share does not work",
         "share": "/ngrok http 3000"
     },
     "author": "Cory House",

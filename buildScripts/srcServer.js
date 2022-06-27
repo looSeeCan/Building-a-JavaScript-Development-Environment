@@ -60,3 +60,12 @@ app.listen(port, function(err) {
 //go back to srcServer and import webpack and webpack.config
 //We've wired up webpack to bundle our JavaScript and we've set up Express as our dev server to serve our app, but, we haven't set up any js yet
 //lets create our Js file and see webpack in action. when we set up webpack.config.dev.js. We set up the entry point to index.js. so lets create that
+//note* had a little error issue, had to add this to the scripts > start --openssl-legacy-provider
+//Demo: Handling css with Webpack. created the index.css file and imported it in indeex.js
+//Sourcemaps
+//when we set up our webpack.config.dev, e told webpack to henerate a source map by specifying:  devtool: "eval-source-map"
+//noteI I didnt really understand this source map part
+
+//9Linting
+//created .eslintrc.json.
+
