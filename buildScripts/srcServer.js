@@ -13,6 +13,7 @@ import open from "open";//a reference to open, which we'll use to open our site 
 import webpack from "webpack";//these two imports were created during the bundling process
 import config from "../webpack.config.dev";//remember that its being exported as default so "config" can be named anything
 
+/*eslint-disable no-console*/
 
 const port = 3001;//can choose any port you like
 const app = express();//create an instance of express
@@ -39,33 +40,3 @@ app.listen(port, function(err) {
         open("http://localhost:" + port);
     }
 })
-
-//after I setup Express: 5 Sharing work in progress. install local tunnel. .
-//so why did I need to do this whole setting up a development center when I can just use liveserver? Im not sure yet.
-//I know after this I connect port 3000 to ngrok for "sharing work in progress", but, Im sure I can connect to liveserver too. 
-//npm installl localtunnel -g
-// run local tunnel: lt --port 3000 //pass it the port that was specified. In this case,` 3000
-//local tunnel is no longer being maintained
-//So, I used ngrok instead. after some setup and trouble shooting. I had to type in the cmd line: ./ngrok help
-//that gave me a link to open http://localhost:4000 for ngrok's web interface to inspect traffic. From there i was finally able to get the tunnel
-
-//6 Automation > npm scripts
-
-//7 Transpiling
-//Babel Configuration files using babelrc
-
-//8 Bundling
-//created webpack.config.dev.js
-//we configured webpack, but to actully put it to use, we need to also set up our development server to serve our webpack bundle. we have to configure express to make that happen
-//go back to srcServer and import webpack and webpack.config
-//We've wired up webpack to bundle our JavaScript and we've set up Express as our dev server to serve our app, but, we haven't set up any js yet
-//lets create our Js file and see webpack in action. when we set up webpack.config.dev.js. We set up the entry point to index.js. so lets create that
-//note* had a little error issue, had to add this to the scripts > start --openssl-legacy-provider
-//Demo: Handling css with Webpack. created the index.css file and imported it in indeex.js
-//Sourcemaps
-//when we set up our webpack.config.dev, e told webpack to henerate a source map by specifying:  devtool: "eval-source-map"
-//noteI I didnt really understand this source map part
-
-//9Linting
-//created .eslintrc.json.
-

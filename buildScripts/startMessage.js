@@ -4,5 +4,4 @@
 //so instead of the above chalk = require:
 import chalk from "chalk";
 
-
-console.log(chalk.cyanBright("Starting app in dev mode..."));
+console.log(chalk.cyanBright("Starting app in dev mode..."));// eslint-disable-line no-console

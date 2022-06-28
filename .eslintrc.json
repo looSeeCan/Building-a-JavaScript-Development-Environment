@@ -1,21 +1,43 @@
+// {
+//     "root": true,//declaring this file as the root esLint file. By default ESLint will look for configuration files and all parent folders up to the root directory
+//     //this tells ESlint that this is the project root so it shouldnt look at any parent folders fro ohter configuration files.
+//     "extends": [
+//         "eslint: recommended",//using recommended rules
+//         "plugin: import/errors",
+//         "plugin: import/warnings"
+//     ],
+//     "parserOptions": {//defines the version of Js that we are using 
+//         "ecmaVersion": 7,//we are using version 7, also known as ES2016
+//         "sourceType": "module"//using standard js modules
+//     },
+//     "env": {//environment section. declares some different environments that ESLint should be aware of. These environments tell ESLint te expect certain global variables.
+//         "browser": true,//
+//         "node": true,
+//         "mocha": true
+//     },
+//     "rules": {//we can provide other rules we want to overide
+//         "no-console": 1//0 = 0ff, 1 = warning, 2 = error
+//     }
+// }
+
+/////above is the same code as below. I manually typed it and there was an error. So I just copied and pasted the git code. Solved the error
 {
-    "root": true,//declaring this file as the root esLint file. By default ESLint will look for configuration files and all parent folders up to the root directory
-    //this tells ESlint that this is the project root so it shouldnt look at any parent folders fro ohter configuration files.
+    "root": true,
     "extends": [
-        "eslint: recommended",//using recommended rules
-        "plugin: import/errors",
-        "plugin: import/warnings"
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
     ],
-    "parserOptions": {//defines the version of Js that we are using 
-        "ecmaVersion": 7,//we are using version 7, also known as ES2016
-        "sourceType": "module"//using standard js modules
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "sourceType": "module"
     },
-    "env": {//environment section. declares some different environments that ESLint should be aware of. These environments tell ESLint te expect certain global variables.
-        "browser": true,//
+    "env": {
+        "browser": true,
         "node": true,
         "mocha": true
     },
-    "rules": {//we can provide other rules we want to overide
-        "no-console": 1//0 = 0ff, 1 = warning, 2 = error
+    "rules": {
+        "no-console": 1
     }
 }
