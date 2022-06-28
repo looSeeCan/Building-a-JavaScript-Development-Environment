@@ -6,6 +6,7 @@
         "comment": "skipping this part. cant get it to work, because it the course he uses local tunnel. Im trying to use ngrok. Im sure there is an extension that i can find",
         "prestart": "babel-node buildScripts/startMessage.js",
         "comment1": "I had an issue with an error involving webpack-dev-middleware. error:0308010C:digital envelope routines::unsupported. Something about node 17 not supporting. I had to add the --openssl-legacy-provider part is the start to fix the error",
+        "commentstart": "npm start -s: starts open:src and lint:watch. I could not figure out local tunnel. I used ngrok. I'm sure there is a way to start it in here too. but for now I will start that manually",
         "start": "npm-run-all --parallel open:src lint:watch",
         "open:src":"babel-node --openssl-legacy-provider buildScripts/srcServer.js",
         "comment2": "this share does not work",
@@ -13,7 +14,10 @@
         "commentlint":"lint: esw is the executable for eslint-watch. And we are passing the list of files we want eslint to watch",
         "lint": "esw webpack.config.* src buildScripts --color",
         "commentlintwatch": "eslint watch does not watch our files by default. Instead you have to pass it a command line flag to enable wactch. The extra set of dashes means: pass this arg on to the lint script",
-        "lint:watch":"npm run lint -- --watch"
+        "lint:watch":"npm run lint -- --watch",
+        "commenttest": "specify the reporter we want to use, it determins how the test output should display. then we tell Mocha to run the test setup script that we just setup and then, after that it should run any test that it finds within our src directory and any subdirectories. We define test files as any file that ends in .test.js",
+        "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
+        
     },
     "author": "Cory House",
     "license": "MIT",

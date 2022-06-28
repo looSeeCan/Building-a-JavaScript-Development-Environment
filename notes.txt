@@ -11,23 +11,29 @@
 //6 Automation > npm scripts
 
 //7 Transpiling
-//Babel Configuration files using babelrc
+    //Babel Configuration files using babelrc
 
-//8 Bundling
-//created webpack.config.dev.js
-//we configured webpack, but to actully put it to use, we need to also set up our development server to serve our webpack bundle. we have to configure express to make that happen
-//go back to srcServer and import webpack and webpack.config
-//We've wired up webpack to bundle our JavaScript and we've set up Express as our dev server to serve our app, but, we haven't set up any js yet
-//lets create our Js file and see webpack in action. when we set up webpack.config.dev.js. We set up the entry point to index.js. so lets create that
-//note* had a little error issue, had to add this to the scripts > start --openssl-legacy-provider
-//Demo: Handling css with Webpack. created the index.css file and imported it in indeex.js
-//Sourcemaps
-//when we set up our webpack.config.dev, e told webpack to henerate a source map by specifying:  devtool: "eval-source-map"
-//noteI I didnt really understand this source map part
+//8 Bundling 
+    //created webpack.config.dev.js
+    //we configured webpack, but to actully put it to use, we need to also set up our development server to serve our webpack bundle. we have to configure express to make that happen
+    //go back to srcServer and import webpack and webpack.config
+    //We've wired up webpack to bundle our JavaScript and we've set up Express as our dev server to serve our app, but, we haven't set up any js yet
+    //lets create our Js file and see webpack in action. when we set up webpack.config.dev.js. We set up the entry point to index.js. so lets create that
+    //note* had a little error issue, had to add this to the scripts > start --openssl-legacy-provider
+    //Demo: Handling css with Webpack. created the index.css file and imported it in indeex.js
+    //Sourcemaps
+    //when we set up our webpack.config.dev, e told webpack to henerate a source map by specifying:  devtool: "eval-source-map"
+    //noteI I didnt really understand this source map part
 
 //9Linting
-//created .eslintrc.json.
-//set ESlint as a script
-//because we set "no-console": 1 in eslintrc.json. we will get warnings. 
-/*eslint-disable no-console*/. set this on each page that had a console.log
-added lint:watch. So it will automatically run when changes are made.
+    //created .eslintrc.json.
+    //set ESlint as a script
+    //because we set "no-console": 1 in eslintrc.json. we will get warnings. 
+    /*eslint-disable no-console*/. set this on each page that had a console.log
+    added lint:watch. So it will automatically run when changes are made. Added it to the "start" script so when I cmd line "npm start -s" the development starts and so does lint. though I still have to manually run ngrok 
+
+10 TEsting and Continous Integration.
+    there are 6 decitions to make: 1 FrameWork, 2 Assertion Library, 3 Helper Libraries, 4 Where to run tests, 5 Where to place tests, 6 When to run tests
+    this is what we are going to choose for them: 1 mocha, 2 Chai, 3 JSDOM, 4 Node, 5 Alongside, 6 Upon save
+    created testSetup.js, go to package.json and add a script "test." that will run our test via Mocha
+    npm test. this test gives an error, becuase we do not have any tests yet. lets create one test. created index.test.js 
