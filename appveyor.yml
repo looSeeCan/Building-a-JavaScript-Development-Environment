@@ -2,21 +2,23 @@
 environment:
 	matrix:
 	#node.js
-	- nodejs_version: "14"
+	#telling AppVeyor what version of Node to use
+	- nodejs_version: "18.3.0"
 
+# The rest of this boilerplate is recommended by AppVeyour so that we can declare that we want to install our npm packages and also run our tests
 # Install scripts. (runs after repo cloning)
 install:
 	#Get the latest stable version of Node.js or io.js
 	- ps: Install-Product node $env:nodejs_version
 	# install modules
-	-npm install
+	- npm install
 
 # Post-install test scripts.
 test_script:
 	#Output useful info for debugging.
 	- node --version 
 	- npm --version
-	# run tests
+	# run tests. we are telling it the specific tasks that it shoud run
 	- npm test
 
 # Don't actually build.
