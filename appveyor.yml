@@ -1,6 +1,5 @@
 #Test against this version of Node.js
 environment:
-	matrix:
 	# node.js
 	- nodejs_version: "14"
 
